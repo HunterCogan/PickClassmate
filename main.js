@@ -82,11 +82,13 @@ const clickWrapper = () => {
     };
 };
 
+
 //init bind/page functions
 window.onload = function () {
    // getNames(names);
     clickWrapper();
 };
+
 
 //adding here aswell because problems with pageload on livelink
 clickWrapper();

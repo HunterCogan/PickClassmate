@@ -9,13 +9,13 @@ const tempRes = $('#tempRes');
 //name arr
 let names = ['Andres', 'Cody', 'Cynthia', 'Daniela', 'David', 'Dicky', 'Francisco', 'Hunter', 'Jesper', 'Joey', 'Jonny', 'Juan', 'Sumeet'];
 
-//render names in toggle btns
-const getNames = (arr) => {
-    console.log('test');
-    arr.forEach((e, i) => {
-        $('#name-row').innerHTML += `<div id="${e}" class="nameBtn" onclick="clickName('${e}')">${e}</div>`
-    });
-};
+//render names in dynamic way
+// const getNames = (arr) => {
+//     console.log('test');
+//     arr.forEach((e, i) => {
+//         $('#name-row').innerHTML += `<div id="${e}" class="nameBtn" onclick="clickName('${e}')">${e}</div>`
+//     });
+// };
 
 //handle click names
 const clickName = (n) => {
@@ -30,7 +30,6 @@ const clickName = (n) => {
 
         //add name back to arr
         names.push(`${n}`);
-        console.log(names);
     } else {
         //toggle off
         temp.classList.toggle('canceled');
@@ -38,10 +37,8 @@ const clickName = (n) => {
 
         //remove name from arr
         names = names.filter(e => e !== n);
-        console.log(names)
     }
 };
-
 
 
 //save repetition
@@ -87,7 +84,9 @@ const clickWrapper = () => {
 
 //init bind/page functions
 window.onload = function () {
-    console.log(names);
-    getNames(names);
+   // getNames(names);
     clickWrapper();
 };
+
+//adding here aswell because problems with pageload on livelink
+clickWrapper();

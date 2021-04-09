@@ -11,11 +11,11 @@ let names = ['Andres', 'Cody', 'Cynthia', 'Daniela', 'David', 'Dicky', 'Francisc
 
 //render names in toggle btns
 const getNames = (arr) => {
+    console.log('test')
     arr.forEach((e, i) => {
         $('#name-row').innerHTML += `<div id="${e}" class="nameBtn" onclick="clickName('${e}')">${e}</div>`
     });
 };
-getNames(names);
 
 //handle click names
 const clickName = (n) => {
@@ -85,5 +85,8 @@ const clickWrapper = () => {
     };
 };
 
-//init bind
-clickWrapper();
+//init bind/page functions
+window.onload = function () {
+    getNames(names);
+    clickWrapper();
+};

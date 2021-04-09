@@ -91,5 +91,3 @@ window.onload = function () {
     getNames(names);
     clickWrapper();
 };
-
-window.addEventListener("load", onload, false);

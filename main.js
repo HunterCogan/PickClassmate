@@ -7,7 +7,7 @@ const resHold = $('#result-hold');
 const tempRes = $('#tempRes');
 
 //name arr
-let names = ['Andres', 'Cody', 'Cynthia', 'Daniela', 'David', 'Dicky', 'Francisco', 'Hunter', 'Jesper', 'Joey', 'Jonny', 'Juan', 'Sumeet'];
+let names = ['Andres', 'Cody', 'Cynthia', 'Daniela', 'David', 'Dicky', 'Francisco', 'Hunter', 'Jesper', 'Joey', 'Jonny', 'Juan', 'Robert', 'Sumeet'];
 
 //render names in dynamic way
 // const getNames = (arr) => {

@@ -63,9 +63,10 @@ const clickWrapper = () => {
         }
 
         //repeatedly change name up to certain point
-        setInterval(() => {
+        let spin = setInterval(() => {
             if (num > stop) {
-                clearInterval()
+                clearInterval(spin);
+                resHold.innerHTML  = `Just Pick`;
             } else {
                 resHold.style.backgroundColor = `${rc()}`;
                 resHold.style.color = `${rc()}`;
@@ -73,6 +74,7 @@ const clickWrapper = () => {
                 num++
             }
         }, int);
+        spin();
 
         //prevent spam
         $('#btn-hold button').onclick = null;
